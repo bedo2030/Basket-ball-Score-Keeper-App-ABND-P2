@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.basketballscorekeeper.ScoreBoard">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        <!-- Team A -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/team_A_name"
+                style="@style/teamNames"
+                tools:text="Team A" />
+            <TextView
+                android:id="@+id/team_A_score"
+                style="@style/teamScore"
+                tools:text="0" />
+            <Button
+                android:id="@+id/team_A_3point_btn"
+                android:onClick="addThreeForTeamA"
+                android:text="@string/btn_3points"
+                style="@style/scoreButtons"/>
+            <Button
+                android:id="@+id/team_A_2point_btn"
+                android:onClick="addTwoForTeamA"
+                android:text="@string/btn_2points"
+                style="@style/scoreButtons" />
+            <Button
+                android:id="@+id/team_A_1point_btn"
+                android:onClick="addOneForTeamA"
+                android:text="@string/btn_1point"
+                style="@style/scoreButtons"/>
+        </LinearLayout>
+        <!-- Vertical Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark" />
+        <!-- Team A -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/team_B_name"
+                style="@style/teamNames"
+                tools:text="Team B" />
+            <TextView
+                android:id="@+id/team_B_score"
+                style="@style/teamScore"
+                tools:text="0" />
+            <Button
+                android:id="@+id/team_B_3point_btn"
+                android:onClick="addThreeForTeamB"
+                android:text="@string/btn_3points"
+                style="@style/scoreButtons" />
+            <Button
+                android:id="@+id/team_B_2point_btn"
+                android:onClick="addTwoForTeamB"
+                android:text="@string/btn_2points"
+                style="@style/scoreButtons" />
+            <Button
+                android:id="@+id/team_B_1point_btn"
+                android:onClick="addOneForTeamB"
+                android:text="@string/btn_1point"
+                style="@style/scoreButtons" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Reset Button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="monospace"
+        android:onClick="resetScores"
+        android:padding="16dp"
+        android:text="Reset"
+        android:textSize="22sp" />
+</RelativeLayout>

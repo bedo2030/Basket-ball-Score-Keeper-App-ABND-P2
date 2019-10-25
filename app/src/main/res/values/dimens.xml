@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_padding_margin_16dp">16dp</dimen>
+    <dimen name="start_button_text_size">36sp</dimen>
+    <dimen name="team_name_textSize">32sp</dimen>
+</resources>
